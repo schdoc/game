@@ -32,7 +32,7 @@ bool App::init(){
 		return false;
 	}
 	cheesedude.x = (SCREEN_WIDTH/2)-(cheesedude.width/2);
-	cheesedude.y = (SCREEN_HEIGHT/2)-(cheesedude.height/2);
+	cheesedude.y = (SCREEN_HEIGHT/2)-(cheesedude.height/2)-32;
 	if((cheesedude.hand.load(renderer, "./res/img/sprite/cheesedude_hand.bmp", 64, 64)) == NULL){
 		printf("Failed to load entity: %s", SDL_GetError());
 		return false;
@@ -49,7 +49,7 @@ bool App::init(){
 		printf("Failed to load text: %s", SDL_GetError());
 		return false;
 	}
-	text.text = "i procrastinated\ntoo much :(";
+	text.text = "i slept\ntoo long :(";
 	text.charspacing = -6;
 	text.bob = true;
 	text.bobradius = 10;

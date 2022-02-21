@@ -18,6 +18,7 @@ void App::quit(){
 }
 
 void App::keydown(SDL_Scancode scan, SDL_Keycode sym, Uint16 mod){
+	SDL_Log("%d %d %d", scan, sym, mod);
 	switch(sym){
 		case SDLK_RETURN:
 			if(SDL_GetModState() & KMOD_ALT){
