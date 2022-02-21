@@ -1,5 +1,6 @@
 objdir:=obj
 srcdir:=src
+resdir:=res
 bindir:=bin
 
 #pleasedoitinthisorder:=event_handler anim cleanup entity event init loop render texture main
@@ -34,3 +35,5 @@ run: $(dlls)
 	./bin/main.exe
 debug: $(dlls)
 	gdb bin/main.exe
+release: $(dlls)
+	cp -r $(resdir)/ $(bindir)/.
