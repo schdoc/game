@@ -2,21 +2,34 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
-#define SCREEN_WIDTH 640
-#define SCREEN_HEIGHT 480
 
 #include <SDL.h>
-class App {
+#include "constants.h"
+#include "event_handler.h"
+#include "texture.h"
+#include "anim.h"
+#include "entity.h"
+#include "map.h"
+#include "player.h"
+
+class App: public EventHandler{
 	private:
-		bool Running;
-		SDL_Window* Screen;
+		bool RUNNING;
+		bool FULLSCREEN;
+		SDL_Window* window;
+		Player cheesedude;
+		SDL_Renderer* renderer;
+		Animator cheesedude_anim;
 	public:
 		App();
-		int Exec();
-		bool Init();
-		void Event(SDL_Event* Event);
-		void Loop();
-		void Render();
-		void Cleanup();
+		int exec();
+		bool init();
+		void event(SDL_Event* event);
+		void keydown(SDL_Scancode scan, SDL_Keycode sym, Uint16 mod);
+		void keyup(SDL_Scancode scan, SDL_Keycode sym, Uint16 mod);
+		void loop();
+		void render();
+		void quit();
+		void cleanup();
 };
 #endif
