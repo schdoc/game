@@ -23,7 +23,6 @@ void Player::loop(){
 	Entity::loop();
 	this->hand.x = x;
 	this->hand.y = y;
-	SDL_GetMouseState(&this->hand.aimX, &this->hand.aimY);
 	// Did not think i would need the window or the renderer... oops
 	// SDL_RenderWindowToLogical() // https://github.com/libsdl-org/SDL/pull/4939
 	this->hand.loop();

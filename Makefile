@@ -1,5 +1,6 @@
 objdir:=obj
 srcdir:=src
+libdir:=lib
 resdir:=res
 bindir:=bin
 
@@ -11,8 +12,8 @@ dlls:=$(addprefix $(bindir)/, SDL2.dll iconv.dll libstdc++-6.dll libgcc_s_seh-1.
 
 prefix:=/usr/x86_64-w64-mingw32/sys-root/mingw
 
-CFLAGS:=-O -Wall -I$(prefix)/include/SDL2 -mwindows -g
-LIBS:=-lmingw32 -lSDL2main -lSDL2
+CFLAGS:=-O -Wall -Iinclude/SDL2 -mwindows -g
+LIBS:=-lmingw32 -L$(libdir) -lSDL2main -lSDL2
 CXX:=x86_64-w64-mingw32-g++
 
 bin/main.exe: $(objects)
@@ -27,6 +28,8 @@ $(objdir)/main.o: $(objdir)/event_handler.o $(objdir)/anim.o $(objdir)/entity.o
 clean:
 	-rm $(objdir)/*.* $(bindir)/*.*
 $(bindir)/%.dll: $(prefix)/bin/%.dll
+	cp $< $(bindir)/
+$(bindir)/SDL2.dll: $(libdir)/SDL2.dll
 	cp $< $(bindir)/
 config:
 	echo $(wildcard $(srcdir)/*.cpp)

@@ -11,6 +11,14 @@
 
 void App::loop(){
 	Framelimiter::fps.loop();
+	int mousex = 0;
+	int mousey = 0;
+	float aimx = 0;
+	float aimy = 0;
+	SDL_GetMouseState(&mousex, &mousey);
+	SDL_RenderWindowToLogical(renderer, mousex, mousey, &aimx, &aimy);
+	cheesedude.hand.aimX = (int)aimx;
+	cheesedude.hand.aimY = (int)aimy;
 	const Uint8 *keys = SDL_GetKeyboardState(NULL);
 	if(keys[SDL_SCANCODE_A]){
 		cheesedude.left = true;

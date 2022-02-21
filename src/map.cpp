@@ -8,6 +8,7 @@
  */
 
 #include "map.h"
+#include <cstdio>
 
 Map Map::currentmap;
 
