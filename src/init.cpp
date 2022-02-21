@@ -1,3 +1,12 @@
+/**
+ * @defgroup   INIT initialize
+ *
+ * @brief      Initialization
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #include "main.h"
 
 bool App::init(){
@@ -28,10 +37,22 @@ bool App::init(){
 		printf("Failed to load entity: %s", SDL_GetError());
 		return false;
 	}
+	if((cheesedude.hand.weapon.load(renderer, "./res/img/sprite/wpn_glock.bmp")) == NULL){
+		printf("Failed to load entity: %s", SDL_GetError());
+		return false;
+	}
 	if(Map::currentmap.load(renderer, "./res/map/flat.map") == false){
 		printf("Failed to load map: %s", SDL_GetError());
 		return false;
 	}
+	if(text.load(renderer, "./res/img/sprite/charmap.bmp", 16) == false){
+		printf("Failed to load text: %s", SDL_GetError());
+		return false;
+	}
+	text.text = "i procrastinated\ntoo much :(";
+	text.charspacing = -6;
+	text.bob = true;
+	text.bobradius = 10;
 	Entity::entities.push_back(&cheesedude);
 	return true;
 }

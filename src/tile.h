@@ -1,3 +1,12 @@
+/**
+ * @defgroup   TILE tile
+ *
+ * @brief      Tile class from sdltutorials
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #ifndef _TILE_H_
 #define _TILE_H_
 #include "constants.h"

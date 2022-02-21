@@ -1,3 +1,12 @@
+/**
+ * @defgroup   TEXTURE texture
+ *
+ * @brief      Texture handler with many draw definitions
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #ifndef _SPRITE_H_
 #define _SPRITE_H_
 

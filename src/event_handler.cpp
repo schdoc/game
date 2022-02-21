@@ -1,3 +1,12 @@
+/**
+ * @defgroup   EVENT event_handler
+ *
+ * @brief      Event handler from which the App class inherits for easier code
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #include "event_handler.h"
 
 EventHandler::EventHandler(){

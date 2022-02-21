@@ -1,3 +1,12 @@
+/**
+ * @defgroup   MAP map
+ *
+ * @brief      Map class adapted from sdltutorials for only one map
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #ifndef _MAP_H_
 #define _MAP_H_
 

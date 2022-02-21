@@ -1,3 +1,12 @@
+/**
+ * @defgroup   RENDER render
+ *
+ * @brief      SDL render function
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #include "main.h"
 
 void App::render(){
@@ -11,6 +20,8 @@ void App::render(){
 		if(!entity) continue;
 		entity->render(renderer);
 	}
+
+	text.render(renderer);
 
 	SDL_RenderPresent(renderer);
 }

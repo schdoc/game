@@ -1,3 +1,12 @@
+/**
+ * @defgroup   LOOP loop
+ *
+ * @brief      Loop function to update entities before render call
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #include "main.h"
 
 void App::loop(){
@@ -33,5 +42,7 @@ void App::loop(){
 			entB->collision(entA);
 		}
 	}
+	text.x = cheesedude.x;
+	text.y = cheesedude.y-48;
 	EntityCollision::queue.clear();
 }

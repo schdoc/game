@@ -1,3 +1,12 @@
+/**
+ * @defgroup   EVENT event
+ *
+ * @brief      App event handler
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #include "main.h"
 
 void App::event(SDL_Event* event){

@@ -1,3 +1,12 @@
+/**
+ * @defgroup   CLEANUP cleanup
+ *
+ * @brief      SDL cleanup function.
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #include "main.h"
 
 void App::cleanup(){

@@ -1,3 +1,12 @@
+/**
+ * @defgroup   FRAMELIMITER framelimiter
+ *
+ * @brief      Framelimiter. For older machines that may not run the game at same speed (from sdltutorials)
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #ifndef _FRAMELIMIT_H_
 #define _FRAMELIMIT_H_
 

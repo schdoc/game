@@ -1,3 +1,12 @@
+/**
+ * @defgroup   ENTITY entity
+ *
+ * @brief      Entities (from sdltutorials) and static entities (written by me).
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #include "entity.h"
 
 std::vector<Entity*> Entity::entities;
@@ -76,7 +85,7 @@ void Entity::loop(){
 }
 
 void Entity::render(SDL_Renderer* dest){
-	if(tex == NULL || dest == NULL) return;
+	if(tex == NULL || dest == NULL || visible == false) return;
 	Texture::draw(tex, dest, anim * width, animator.getFrame() * height, x, y, width, height, angle, flip?SDL_FLIP_HORIZONTAL:SDL_FLIP_NONE);
 }
 
@@ -273,5 +282,23 @@ bool Entity::posValidEnt(Entity* entity, int toX, int toY){
 bool Entity::jump(){
 	if(jumpflag == false) return false;
 	speedY = -maxSpeedY;
+	return true;
+}
+
+StaticEntity::StaticEntity(){
+	type = ENTITY_TYPE_GENERIC;
+	flags = ENTITY_FLAG_NOCLIP;
+}
+
+void StaticEntity::loop(){
+	step();
+}
+
+bool StaticEntity::load(SDL_Renderer* renderer, char* file, int width, int height){
+	if((tex = Texture::load(renderer, file)) == NULL){
+		return false;
+	}
+	this->width = width;
+	this->height = height;
 	return true;
 }

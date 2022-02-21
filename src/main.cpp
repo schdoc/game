@@ -1,3 +1,12 @@
+/**
+ * @defgroup   MAIN main
+ *
+ * @brief      Brains of the game
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #include "main.h"
 
 App::App() {

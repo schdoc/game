@@ -1,3 +1,12 @@
+/**
+ * @defgroup   ANIM animation
+ *
+ * @brief      Source for animator
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #include "anim.h"
 
 Animator::Animator(){

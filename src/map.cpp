@@ -1,3 +1,12 @@
+/**
+ * @defgroup   MAP map
+ *
+ * @brief      Map class adapted from sdltutorials for only one map
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #include "map.h"
 
 Map Map::currentmap;

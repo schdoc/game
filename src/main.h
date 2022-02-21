@@ -1,3 +1,12 @@
+/**
+ * @defgroup   MAIN main
+ *
+ * @brief      Header for app
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #define SDL_MAIN_HANDLED
 #ifndef _MAIN_H_
 #define _MAIN_H_
@@ -11,6 +20,7 @@
 #include "entity.h"
 #include "map.h"
 #include "player.h"
+#include "text.h"
 
 class App: public EventHandler{
 	private:
@@ -19,6 +29,7 @@ class App: public EventHandler{
 		SDL_Window* window;
 		Player cheesedude;
 		SDL_Renderer* renderer;
+		Text text;
 		Animator cheesedude_anim;
 	public:
 		App();

@@ -1,3 +1,12 @@
+/**
+ * @defgroup   ENTITY entity
+ *
+ * @brief      Entities (from sdltutorials) and static entities (written by me).
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #ifndef _ENTITY_H_
 #define _ENTITY_H_
 
@@ -33,6 +42,8 @@ class Entity{
 		bool left;
 		bool right;
 		bool flip;
+
+		bool visible = true;
 
 		double angle;
 
@@ -83,6 +94,13 @@ class EntityCollision{
 		Entity* entA;
 		Entity* entB;
 		EntityCollision();
+};
+
+class StaticEntity : public Entity{
+	public:
+		StaticEntity();
+		virtual bool load(SDL_Renderer* renderer, char* file, int w, int h);
+		virtual void loop();
 };
 
 #endif

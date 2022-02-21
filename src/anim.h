@@ -1,3 +1,12 @@
+/**
+ * @defgroup   ANIM animation
+ *
+ * @brief      Animation controller header from sdltutorials
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #ifndef _ANIM_H_
 #define _ANIM_H_
 

@@ -1,3 +1,12 @@
+/**
+ * @defgroup   PLAYER player
+ *
+ * @brief      Player and PlayerHand source. Player from sdltutorials.
+ *
+ * @author     schdoc
+ * @date       2022
+ */
+
 #include "player.h"
 
 Player::Player(){
